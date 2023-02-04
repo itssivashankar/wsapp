@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         val callButton = findViewById<Button>(R.id.call_button)
         callButton.setOnClickListener {
             val intent = Intent(Intent.ACTION_CALL)
-            intent.data = Uri.parse("tel:8144668431")
+            intent.data = Uri.parse("tel:phonenumber")
             startActivity(intent)
         }
         val button = findViewById<Button>(R.id.sms_button)
@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
                     }
 
                     // on below line we are sending text message.
-                    smsManager.sendTextMessage("9629430418", null, "Simple Check", null, null)
+                    smsManager.sendTextMessage("phonenumber", null, "Simple Check", null, null)
 
                     // on below line we are displaying a toast message for message send,
                     Toast.makeText(applicationContext, "Message Sent", Toast.LENGTH_LONG).show()
